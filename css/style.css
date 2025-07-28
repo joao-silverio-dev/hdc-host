@@ -59,14 +59,17 @@ nav {
     font-size: 32px;
 }
 .description {
-    padding: 5rem 0;
+    padding: 3rem 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .description-security,
 .description-performance,
 .description-support {
-    margin: 0px 20px;
+    margin: 40px 20px;
+    min-width: 200px;
+    max-width: 500px;
 }
 .description-security li,
 .description-performance li,
@@ -114,16 +117,18 @@ section.pricing h2{
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    flex-wrap: wrap;
 }
 .pricing-container div {
     flex: 1;
 }
 
 .plan{
-    max-width: 275px;
+    width: 275px;
+    
     list-style: none;
     text-align: center;
-    margin: auto;
+    margin: 10px auto;
 }
 .plan .price {
     position: relative;
@@ -254,4 +259,23 @@ footer p {
     background-color: #232a31;
     color: white;
     padding: 10px 0px;
+}
+
+@media screen and (max-width: 620px){
+    ul.navigation li{
+        font-size: 10px;
+        margin: 0 5px;
+    }
+    .contact-datas input[type="text"],
+    .contact-datas input[type="email"] {
+        width: 37.5%;
+    }
+    .contact form textarea {
+        width: 80%;
+    }
+}
+@media  screen and (max-width: 370px) {
+    ul.navigation li {
+        font-size: 8px;
+    }
 }
